@@ -72,7 +72,4 @@ class Track < ActiveRecord::Base
     end
   end
 
-  def map_path
-  end
-
 end

@@ -19,7 +19,7 @@
 <h2>Map Your Trail</h2>
 
 <div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'>
+  <div id="map" style='width: 800px; height: 450px;'>
   </div>
 </div>
 
@@ -74,9 +74,16 @@
 
 <script type="text/javascript">
   handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers(<%= raw @hash.to_json %>);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
+  handler.buildMap({ provider: {mapTypeId: google.maps.MapTypeId.TERRAIN}, internal: {id: 'map'}}, function(){
+    //markers = handler.addMarkers(<%= raw @hash.to_json %>);
+    //polys = handler.map.addPolyline(<%= raw @hash.to_json %>);
+    polyline = <%= raw @hash.to_json %>
+    handler.addPolyline(polyline, {geodesic: true, strokeColor: "red", strokeOpacity: 0.8}); // and not addPolylines
+    handler.bounds.extend(polyline[0]);
+    handler.bounds.extend(polyline[ polyline.length - 1]);
+    handler.fitMapToBounds(polyline);
+    //handler.bounds.extendWith(markers);
+    //handler.fitMapToBounds();
   });
+
 </script>

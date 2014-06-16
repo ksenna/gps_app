@@ -14,8 +14,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'nokogiri'
 gem 'httparty'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
-# gem 'polylines'
-gem 'gmaps4rails'
+gem 'gmaps4rails'#, '~> 1.5.6'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'rails_12factor', group: :production
 gem 'spring',        group: :development
