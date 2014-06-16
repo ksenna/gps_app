@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--  A sample set of waypoints  -->
+<trk>
+	<name> RUN ON: 04/10/12 11:33 AM</name>
+	<trkseg>
+		<trkpt lat="-29.837917" lon="31.035915">
+			<ele>10.987309</ele>
+			<time>2012-04-10T11:33:49-05:00</time>
+		</trkpt>
+		<trkpt lat="-29.837894" lon="31.035906">
+			<ele>11.96569</ele>
+			<time>2012-04-10T11:33:50-05:00</time>
+		</trkpt>
+	</trkseg>
+</trk>
