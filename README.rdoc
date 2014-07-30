@@ -1,28 +1,16 @@
-== README
+== GPS Parsing
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails web application that parses xml/gpx files using Nokogiri and displays them using gmaps4rails.
 
-Things you may want to cover:
+View a working version of parsing on Heroku.[http://gumshoetrails.herokuapp.com/]
+=== Setup and Installation
+Clone the repository locally. Then install gems:  
+  bundle install  
+The database is postgresql. To setup the database, run:
+  rake db:create db:migrate
+  
+=== Contributing & Questions
+If you would like to contribute or have any questions, email me at kelly@kellysenna.com[mailto:kelly@kellysenna.com].
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+=== Licensing
+MIT License
